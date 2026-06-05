@@ -1,0 +1,108 @@
+{
+    "missing_data": {
+        "application_train.csv": {
+            "columns": [
+                "COMMONAREA_AVG",
+                "COMMONAREA_MODE",
+                "COMMONAREA_MEDI",
+                "NONLIVINGAPARTMENTS_MEDI",
+                "NONLIVINGAPARTMENTS_MODE",
+                "NONLIVINGAPARTMENTS_AVG",
+                "LIVINGAPARTMENTS_AVG",
+                "LIVINGAPARTMENTS_MODE",
+                "LIVINGAPARTMENTS_MEDI",
+                "FONDKAPREMONT_MODE"
+            ],
+            "missing_rates": [
+                0.7012666666666667,
+                0.7012666666666667,
+                0.7012666666666667,
+                0.6956,
+                0.6956,
+                0.6956,
+                0.6859,
+                0.6859,
+                0.6859,
+                0.6858
+            ]
+        },
+        "bureau.csv": {
+            "columns": [
+                "AMT_ANNUITY",
+                "AMT_CREDIT_MAX_OVERDUE",
+                "DAYS_ENDDATE_FACT",
+                "AMT_CREDIT_SUM_LIMIT",
+                "AMT_CREDIT_SUM_DEBT",
+                "DAYS_CREDIT_ENDDATE",
+                "SK_ID_CURR",
+                "DAYS_CREDIT",
+                "SK_ID_BUREAU",
+                "CREDIT_DAY_OVERDUE"
+            ],
+            "missing_rates": [
+                0.7414,
+                0.646,
+                0.383,
+                0.34626666666666667,
+                0.15146666666666667,
+                0.0653,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        "previous_application.csv": {
+            "columns": [
+                "RATE_INTEREST_PRIVILEGED",
+                "RATE_INTEREST_PRIMARY",
+                "AMT_DOWN_PAYMENT",
+                "RATE_DOWN_PAYMENT",
+                "NAME_TYPE_SUITE",
+                "DAYS_TERMINATION",
+                "DAYS_FIRST_DRAWING",
+                "DAYS_FIRST_DUE",
+                "DAYS_LAST_DUE_1ST_VERSION",
+                "DAYS_LAST_DUE"
+            ],
+            "missing_rates": [
+                0.9967666666666667,
+                0.9967666666666667,
+                0.49543333333333334,
+                0.49543333333333334,
+                0.4825,
+                0.3789,
+                0.3789,
+                0.3789,
+                0.3789,
+                0.3789
+            ]
+        }
+    },
+    "metrics": {
+        "经典逻辑回归 基线": {
+            "AUC": 0.543393985711363,
+            "KS": 0.07960114305390842,
+            "Recall": 0.6636455186304129,
+            "Time(s)": 2.7
+        },
+        "随机森林 跨表集成": {
+            "AUC": 0.5921121111781906,
+            "KS": 0.13147835549258696,
+            "Recall": 0.5746223564954682,
+            "Time(s)": 2.39
+        },
+        "XGBoost 全行为链": {
+            "AUC": 0.6304662885342255,
+            "KS": 0.1905679243187936,
+            "Recall": 0.5881168177240684,
+            "Time(s)": 1.41
+        },
+        "跨表多路聚合优化 LightGBM (创新改进)": {
+            "AUC": 0.6256253465082989,
+            "KS": 0.18251345324092377,
+            "Recall": 0.9985901309164149,
+            "Time(s)": 1.65
+        }
+    }
+}
